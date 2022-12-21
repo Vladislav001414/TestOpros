@@ -1,78 +1,77 @@
 
 <Container>
-
+    rows:2
     Image:
-        id:Image
         source: 'fon_inst.png'
-        size_hint: 1, 1
-        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-    BoxLayout:
-        orientation: 'vertical'
-        size_hint: 0.5, 0.04
+        size: self.texture_size
+    GridLayout:
+        rows: 2
+        BoxLayout:
+            orientation: 'vertical'
+            padding: [0,0,0,140]
+            Label:
+                id: Title_1
+                text :'ДЛЯ ТОГО ЧТОБЫ НАЧАТЬ'
+                size_hint : 0.4, 0.01
+                font_size : '15'
+                color : 'black'
+                bold : True
+                pos_hint: {'x':0.3, 'y':0.1}
 
-        pos_hint: {'center_x':0.5,'center_y':0.743}
-        Label:
-            id: Title_1
-            text :'Для того чтобы начать опрос'
-            size_hint : 0.4, 0.01
-            font_size : '15'
-            color : 'black'
-            bold : True
-            pos_hint : {'center_x': 0.5, 'y': 0.75}
-        Label:
-            id: Title_2
-            text : 'НУЖНО ВОЙТИ В СВОЙ АККАУНТ INSTAGRAM'
-            size_hint: 0.1, 0.01
-            font_size: '15'
-            color: 'black'
-            bold: True
-            pos_hint: {'center_x': 0.5, 'y': 0.8}
+            Label:
+                id: Title_2
+                text : 'НУЖНО ВОЙТИ В СВОЙ АККАУНТ INSTAGRAM'
 
-    BoxLayout:
-        orientation: 'vertical'
-        padding: [0, 200, 0, 150]
-        spacing:10
-        background_normal : ''
-        background_color : 'blue'
-        size_hint: 0.8, 0.6
-        pos_hint:{'center_x': 0.5, 'center_y': 0.6}
-        Label:
-            id: Line_1
-            text : 'Телефон, имя пользователя или эл. адрес'
-            color : '#789a9c'
-            size_hint : 0.6, 0.01
-            font_size : '15'
-            bold : True
-            pos_hint : {'center_x': 0.49, 'center_y': 0.6}
-        TextInput:
-            id: username
-            size_hint : 0.8, 0.035
-            pos_hint : {'x': 0.1, 'y': 0.57}
-            multiline : False
-            font_size : '27'
-        Label:
-            id: Line_2
-            text: 'Пароль'
-            color:'#789a9c'
-            bold : True
-            size_hint: 0.4, 0.01
-            font_size: '15'
-            pos_hint: {'center_x': 0.17, 'center_y': 0.53}
-        TextInput:
-            id: password
-            size_hint: 0.8 , 0.035
-            pos_hint: {'x': 0.1,'y': 0.5}
-            multiline: False
-            font_size: '27'
-    BoxLayout:
-        size_hint: 0.64, 0.4
-        pos_hint: {'x': 0.18, 'center_y':0.45}
-        Button:
-            id: SignIn
-            text: 'Войти'
-            size_hint: 1, 0.12
-            background_normal: ''
-            background_color: 'blue'
-            pos_hint: {'center_x': 0.5, 'center_y': 0.45}
-
+                size_hint: 0.4, 0.01
+                font_size: '15'
+                color: 'black'
+                bold: True
+                pos_hint: {'x':0.30, 'y': 0}
+        GridLayout:
+            rows: 5
+            cols: 2
+            BoxLayout:
+                orientation: 'vertical'
+                padding: [0, -150, 0, 370]
+                spacing:10
+                background_normal : ''
+                background_color : 'blue'
+                size_hint: 0.8, 0.3
+                Label:
+                    id: Line_1
+                    text : 'Телефон, имя пользователя или эл. адрес'
+                    color : '#789a9c'
+                    size_hint : 0.6, 0.05
+                    font_size : '15'
+                    bold : True
+                    pos_hint : {'x': 0.155, 'y': 0.6}
+                TextInput:
+                    id: username
+                    size_hint : 0.695, 0.1
+                    pos_hint : {'x': 0.14, 'y': 0.57}
+                    multiline : False
+                    font_size : '27'
+                Label:
+                    id: Line_2
+                    text: 'Пароль'
+                    color:'#789a9c'
+                    bold : True
+                    size_hint: 0.4, 0.01
+                    font_size: '15'
+                    pos_hint:{'x': -0.003, 'y':0.6}
+                TextInput:
+                    id: password
+                    size: 0, 45
+                    size_hint: 0.695 , None
+                    pos_hint: {'x': 0.14,'y': 0.5}
+                    multiline: False
+                    font_size: '27'
+                Button:
+                    id: SignIn
+                    text: 'Войти'
+                    size: 0 , 45
+                    size_hint: 0.695, None
+                    background_normal: ''
+                    background_color: 'blue'
+                    pos_hint: {'center_x': 0.488, 'center_y': 0.45}
 

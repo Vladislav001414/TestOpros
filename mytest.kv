@@ -1,3 +1,14 @@
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgb: (0 ,0 ,255,)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [8]
+
 <Container>
     username: username
     password: password
@@ -9,7 +20,7 @@
     BoxLayout:
         spacing: 1
         orientation: 'vertical'
-        padding: [0, -200, 0, 600]
+        padding: [0, -170, 0, 620]
         background_normal : ''
         background_color : 'blue'
         size_hint: 1, 0.5
@@ -24,10 +35,12 @@
         TextInput:
             id: username
             size: 0, 45
-            size_hint : 0.578, 0.03
+            size_hint : 0.6, 0.035
             pos_hint : {'x': 0.2, 'y': 0.57}
             multiline : False
-            font_size : '30'
+            font_size : '40'
+            background_normal: ''
+            background_color: '#EBE5E5'
         Label:
             id: Line_2
             text: 'Пароль'
@@ -35,19 +48,24 @@
             size_hint: 0.6, 0.02
             font_size: '20'
             bold : True
+
             pos_hint:{'x': -0.05, 'y':0.6}
         TextInput:
             id: password
             size: 0, 45
-            size_hint: 0.578 , 0.03
+            size_hint: 0.6 , 0.035
             pos_hint: {'x': 0.2,'y': 0.5}
             multiline: False
-            font_size: '30'
-        Button:
+            font_size: '40'
+            background_normal: ''
+            background_color: '#EBE5E5'
+        RoundedButton:
             id: SignIn
             text: 'Войти'
             size: 0 , 45
-            size_hint: 0.578, 0.03
-            background_normal: ''
-            background_color: 'blue'
+            size_hint: 0.6, 0.035
+            #background_normal: ''
+            #background_color: 'blue'
             pos_hint: {'x': 0.2, 'y': 0.5}
+            bold: True
+            font_size: '17'

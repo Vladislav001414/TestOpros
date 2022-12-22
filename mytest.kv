@@ -1,13 +1,13 @@
 <RoundedButton@Button>
-    background_color: (0,0,0,0)
     background_normal: ''
+    background_color: (0,0,0,0)
     canvas.before:
         Color:
-            rgb: (0 ,0 ,255,)
+            rgb: (0 ,0 ,255)
         RoundedRectangle:
             size: self.size
             pos: self.pos
-            radius: [8]
+            radius: [10]
 
 <Container>
     username: username
@@ -20,7 +20,7 @@
     BoxLayout:
         spacing: 1
         orientation: 'vertical'
-        padding: [0, -170, 0, 620]
+        padding: [0, -170, 0, 630]
         background_normal : ''
         background_color : 'blue'
         size_hint: 1, 0.5
@@ -59,6 +59,11 @@
             font_size: '40'
             background_normal: ''
             background_color: '#EBE5E5'
+    BoxLayout:
+        spacing: 1
+        orientation: 'vertical'
+        padding: [0, -90, 0, 600]
+        size_hint: 1, 0.5
         RoundedButton:
             id: SignIn
             text: 'Войти'
@@ -66,6 +71,6 @@
             size_hint: 0.6, 0.035
             #background_normal: ''
             #background_color: 'blue'
-            pos_hint: {'x': 0.2, 'y': 0.5}
+            pos_hint: {'x': 0.2, 'y': 0.2}
             bold: True
             font_size: '17'

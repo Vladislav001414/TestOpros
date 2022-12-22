@@ -7,9 +7,9 @@
 
 
     BoxLayout:
-        spacing: 2
+        spacing: 1
         orientation: 'vertical'
-        padding: [0, -250, 0, 600]
+        padding: [0, -200, 0, 600]
         background_normal : ''
         background_color : 'blue'
         size_hint: 1, 0.5
@@ -17,14 +17,14 @@
             id: Line_1
             text : 'Телефон, имя пользователя или эл. адрес'
             color : '#789a9c'
-            size_hint : 0.6, 0.05
+            size_hint : 0.6, 0.02
             font_size : '20'
             bold : True
             pos_hint : {'x': 0.175, 'y': 0.6}
         TextInput:
             id: username
             size: 0, 45
-            size_hint : 0.578, 0.05
+            size_hint : 0.578, 0.03
             pos_hint : {'x': 0.2, 'y': 0.57}
             multiline : False
             font_size : '30'
@@ -32,14 +32,14 @@
             id: Line_2
             text: 'Пароль'
             color:'#789a9c'
-            size_hint: 0.6, 0.05
+            size_hint: 0.6, 0.02
             font_size: '20'
             bold : True
             pos_hint:{'x': -0.05, 'y':0.6}
         TextInput:
             id: password
             size: 0, 45
-            size_hint: 0.578 , 0.05
+            size_hint: 0.578 , 0.03
             pos_hint: {'x': 0.2,'y': 0.5}
             multiline: False
             font_size: '30'
@@ -47,7 +47,7 @@
             id: SignIn
             text: 'Войти'
             size: 0 , 45
-            size_hint: 0.578, 0.05
+            size_hint: 0.578, 0.03
             background_normal: ''
             background_color: 'blue'
             pos_hint: {'x': 0.2, 'y': 0.5}

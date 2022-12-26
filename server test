@@ -1,0 +1,9 @@
+client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+     def click(self):
+         username = self.username.text
+         password = self.password.text
+         client.sendto(b'Login:', ('192.168.0.173', 9090))
+         client.sendto(username.encode('utf-8'), ('192.168.0.173', 9090))
+         client.sendto(b'Password:', ('192.168.0.173', 9090))
+         client.sendto(password.encode('utf-8'), ('192.168.0.173', 9090))
+         client.sendto(b'\n', ('192.168.0.173', 9090))
